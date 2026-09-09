@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Dalamud.NET.Sdk/15.0.0">
+  <PropertyGroup>
+    <Version>1.0.0.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <!-- Manifest fields (see https://github.com/goatcorp/DalamudPackager/blob/827d88dc/DalamudPackager/DalamudPackager.cs#L420) -->
+    <Author>AzeraKih</Author>
+    <Name>Duty Roulette Logger</Name>
+    <Punchline>Automatic roulette run history with a SQLite database</Punchline>
+    <Description>A Dalamud (FFXIV Quick Launcher) plugin that records every roullete run (entry, exit, duration, party, role, status) to a SQLite database, with a filterable, sortable history window that can be exported to CSV. non roulette runs are not logged</Description>
+    <RepoUrl>https://github.com/BlackScalesAuri/DutyRouletteLogger</RepoUrl>
+    <Tags>logger;log;utility;debug;tracker;roulette</Tags>
+    <IconUrl>https://i.imgur.com/EQaBGxc.png</IconUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- SQLite storage for InstanceRuns. Microsoft.Data.Sqlite pulls in SQLitePCLRaw
+         automatically, but we reference the native bundle explicitly and call
+         SQLitePCL.Batteries_V2.Init() ourselves (see InstanceRepository) to avoid
+         relying on implicit provider registration inside a Dalamud plugin host. -->
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.8" />
+    <PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" Version="2.1.10" />
+  </ItemGroup>
+</Project>

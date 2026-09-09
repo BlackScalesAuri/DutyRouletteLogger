@@ -1,0 +1,25 @@
+{
+  "Author": "AzeraKih",
+  "Name": "Duty Roulette Logger",
+  "InternalName": "DutyRouletteLogger",
+  "AssemblyVersion": "1.0.0.0",
+  "Description": "A Dalamud (FFXIV Quick Launcher) plugin that records every roullete run (entry, exit, duration, party, role, status) to a SQLite database, with a filterable, sortable history window that can be exported to CSV. non roulette runs are not logged",
+  "ApplicableVersion": "any",
+  "RepoUrl": "https://github.com/BlackScalesAuri/DutyRouletteLogger",
+  "Tags": [
+    "logger",
+    "log",
+    "utility",
+    "debug",
+    "tracker",
+    "roulette"
+  ],
+  "DalamudApiLevel": 15,
+  "LoadRequiredState": 0,
+  "LoadSync": false,
+  "CanUnloadAsync": false,
+  "LoadPriority": 0,
+  "IconUrl": "https://i.imgur.com/EQaBGxc.png",
+  "Punchline": "Automatic roulette run history with a SQLite database",
+  "AcceptsFeedback": true
+}
